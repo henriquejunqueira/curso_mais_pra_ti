@@ -178,37 +178,41 @@ console.log(coisas['letras']); */
 // calculo(soma, subtracao);
 
 // Exemplo calculadora com callback
-let soma = function soma(num1, num2){
-    return num1 + num2;
-}
+// let soma = function soma(num1, num2){
+//     return num1 + num2;
+// }
 
-let subtracao = function subtracao(num1, num2){
-    return num1 - num2;
-}
+// let subtracao = function subtracao(num1, num2){
+//     return num1 - num2;
+// }
 
-let multiplicacao = function soma(num1, num2){
-    return num1 * num2;
-}
+// let multiplicacao = function soma(num1, num2){
+//     return num1 * num2;
+// }
 
-let divisao = function subtracao(num1, num2){
-    return num1 / num2;
-}
+// let divisao = function subtracao(num1, num2){
+//     return num1 / num2;
+// }
 
-function calculadora(operacao, num1, num2, soma, subtracao, multiplicacao, divisao){
-    switch(operacao){
-        case 'soma':
-            return soma(num1, num2);
-            break;
-        case 'subtracao':
-            return subtracao(num1, num2);
-            break;
-        case 'multiplicacao':
-            return multiplicacao(num1, num2);
-            break;
-        case 'divisao':
-            return divisao(num1, num2);
-            break;
-    }
-}
+// function calculadora(operacao, num1, num2, soma, subtracao, multiplicacao, divisao){
+//     switch(operacao){
+//         case 'soma':
+//             return soma(num1, num2);
+//             break;
+//         case 'subtracao':
+//             return subtracao(num1, num2);
+//             break;
+//         case 'multiplicacao':
+//             return multiplicacao(num1, num2);
+//             break;
+//         case 'divisao':
+//             return divisao(num1, num2);
+//             break;
+//     }
+// }
 
-console.log(calculadora('soma', 10, 10, soma));
+// console.log(calculadora('soma', 10, 10, soma));
+
+let teste = () => {
+    console.log('Teste');
+}
