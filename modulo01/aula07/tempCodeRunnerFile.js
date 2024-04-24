@@ -1,0 +1,1 @@
+console.log(`O livro "${livro.titulo}" : ${livro.author}`);
