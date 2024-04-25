@@ -172,15 +172,14 @@
 
 // let numero;
 
-// do{
-//     numero = parseInt(prompt('Digite um número: '));
-//     if(numero % 2 == 0){
-//         console.log(`${numero} é par`);
-//     }else if(numero % 2 == 1){
-//         console.log(`${numero} é ímpar`);
-//     }
-
-// }while(numero === null || numero >= 0);
+// do {
+//   numero = parseInt(prompt('Digite um número: '));
+//   if (numero % 2 == 0) {
+//     console.log(`${numero} é par`);
+//   } else if (numero % 2 == 1) {
+//     console.log(`${numero} é ímpar`);
+//   }
+// } while (numero === null || numero >= 0);
 
 //======================================= Exercício 12 ============================================
 
@@ -212,7 +211,6 @@
 // let numero;
 // let soma = 0;
 // let i = 0;
-
 
 // while(numero !== 0){
 //     numero = parseFloat(prompt('Digite um número ou 0 para sair: '));
@@ -249,7 +247,6 @@
 // let media = soma / somaPesos;
 
 // console.log(media);
-
 
 //======================================= Exercício 16 ============================================
 
