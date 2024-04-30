@@ -91,6 +91,7 @@
 // ? Desenvolver um algoritmo que seja capaz de receber uma lista, e um valor correto. e execute uma pesquisa binária para
 // ? encontrar o valor certo.
 
+// TODO binarySearch
 // function pesquisaBinaria(listaNumerica, posicao){
 //     let valorEsquerda = 0;
 //     let valorDireita = listaNumerica.length - 1;
