@@ -1,4 +1,4 @@
-// ? Exercício 1: 
+// ? Exercício 1:
 // ? Crie um for in pra iterar sobre as propriedades dentro das notas, calcule a média e imprima a média da turma.
 // ? caso a média esteja acima de 3.0, indique que a turma está acima da média de aprovação.
 
@@ -66,10 +66,10 @@
 //     { titulo: 'Oppenheimer', genero: 'Biografia'},
 //     { titulo: 'High School Musical', genero: 'Musical'},
 //     { titulo: 'Barbie', genero: 'Live Action'},
-    // Adicionados
-    // { titulo: 'Dia de Treinamento', genero: 'Crime'},
-    // { titulo: 'Batman', genero: 'Crime'},
-    // { titulo: 'Logan', genero: 'Ação'},
+// Adicionados
+// { titulo: 'Dia de Treinamento', genero: 'Crime'},
+// { titulo: 'Batman', genero: 'Crime'},
+// { titulo: 'Logan', genero: 'Ação'},
 // ];
 
 // let somaFilmes = 0;
@@ -88,7 +88,7 @@
 // }
 
 // * Pesquisa binária
-// ? Desenvolver um algoritmo que seja capaz de receber uma lista, e um valor correto. e execute uma pesquisa binária para 
+// ? Desenvolver um algoritmo que seja capaz de receber uma lista, e um valor correto. e execute uma pesquisa binária para
 // ? encontrar o valor certo.
 
 // function pesquisaBinaria(listaNumerica, posicao){
@@ -185,15 +185,15 @@
 
 // console.log(soma(3, 8, 5, 7));
 
-function multiplicacao(m, ... p){
-    console.log(m);
-    console.log(p);
+function multiplicacao(m, ...p) {
+  console.log(m);
+  console.log(p);
 
-    let resultado = 0;
+  let resultado = 0;
 
-    p.forEach(elemento => resultado += m * elemento);
+  p.forEach((elemento) => (resultado += m * elemento));
 
-    return resultado;
+  return resultado;
 }
 
 console.log(multiplicacao(5, 7, 12, 3, 50));
