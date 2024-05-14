@@ -1056,12 +1056,78 @@
 //   }
 // }
 
+// console.log();
+
 // let mediaDiagSec = calcularMediaDiagonalSecundaria(matriz);
-// console.log(mediaDiagSec);
+// console.log(`\x1b[0;31;31mMédia da diagonal secundária: \x1b[m${mediaDiagSec}`);
 
 // let multiDiagPrincipal = multiplicarDiagonalPrincipal(matriz, mediaDiagSec);
-// console.log(multiDiagPrincipal);
+// console.log(
+//   `\x1b[0;31;36mResultado da diagonal principal multiplicada: \x1b[m${multiDiagPrincipal}`
+// );
 
+// console.log(`\x1b[0;31;32mMatriz: \x1b[m`);
 // console.log(matriz);
+// console.log();
 
 // ! ======================================= Exercício 34 ============================================
+// const prompt = require('prompt-sync')();
+
+// let matriz = [];
+
+// for (let i = 0; i < 50; i++) {
+//   matriz[i] = [];
+//   for (j = 0; j < 50; j++) {
+//     matriz[i][j] = parseFloat((Math.random() * 50 + 1).toFixed(2));
+//   }
+// }
+
+// function multiDiagonalPrincipal(matriz) {
+//   for (let i = 0; i < matriz.length; i++) {
+//     let diagonalPrincipal = matriz[i][i];
+//     for (let j = 0; j < matriz[i].length; j++) {
+//       matriz[i][j] *= diagonalPrincipal;
+//       matriz[i][j] = parseFloat(matriz[i][j].toFixed(2));
+//     }
+//   }
+
+//   return matriz;
+// }
+
+// console.log('\x1b[0;31;31mMatriz: \x1b[m');
+// console.log(multiDiagonalPrincipal(matriz));
+
+// ! ======================================= Exercício 35 ============================================
+// const prompt = require('prompt-sync')();
+
+// let vetorPar = [];
+// let vetorImpar = [];
+// let valor = null;
+
+// function exibirValoresVetores(vetor, tipo) {
+//   if (vetor.length === 0) {
+//     console.log(`Valores ${tipo}: Vazio`);
+//   } else {
+//     const valores = vetor.filter((elemento) => elemento !== '');
+//     console.log(`\x1b[0;31;36mValores ${tipo}:\x1b[m ${valores.join(', ')} `);
+//   }
+// }
+
+// for (let i = 0; i < 30; i++) {
+//   valor = parseInt(prompt(`Digite o ${i + 1}º valor: `));
+
+//   if (valor % 2 === 0) {
+//     vetorPar.push(valor);
+//     if (vetorPar.length === 5) {
+//       exibirValoresVetores(vetorPar, 'pares');
+//       vetorPar = [];
+//     }
+//   } else {
+//     vetorImpar.push(valor);
+//     if (vetorImpar.length === 5) {
+//       exibirValoresVetores(vetorImpar, 'ímpares');
+//       vetorImpar = [];
+//     }
+//   }
+// }
+// ! ======================================= Exercício 36 ============================================
