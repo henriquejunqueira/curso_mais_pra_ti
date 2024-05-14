@@ -1,1 +1,3 @@
-function register() {}
+function register() {
+  console.log('teste');
+}
