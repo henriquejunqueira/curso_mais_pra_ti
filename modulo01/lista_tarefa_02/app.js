@@ -1131,3 +1131,126 @@
 //   }
 // }
 // ! ======================================= Exercício 36 ============================================
+// const prompt = require('prompt-sync')();
+
+// function lerVetor(tamanho) {
+//   let vetorElementosInteiros = [];
+
+//   for (let i = 0; i < tamanho; i++) {
+//     vetorElementosInteiros.push(
+//       parseInt(prompt(`Digite o ${i + 1}º valor do vetor: `))
+//     );
+//   }
+
+//   return vetorElementosInteiros;
+// }
+
+// function contarAcertos(gabarito, respostas) {
+//   let acertos = 0;
+
+//   for (let i = 0; i < gabarito.length; i++) {
+//     if (gabarito.includes(respostas[i])) {
+//       acertos++;
+//     }
+//   }
+
+//   return acertos;
+// }
+
+// const gabarito = lerVetor(13);
+
+// let apostadores = [];
+// let numeroCartao;
+// let respostas;
+// let acertos;
+
+// console.log();
+
+// for (let i = 0; i < 100; i++) {
+//   numeroCartao = prompt(`Digite o número do cartão do apostador ${i + 1}: `);
+
+//   respostas = lerVetor(13);
+//   acertos = contarAcertos(gabarito, respostas);
+
+//   apostadores.push({ numeroCartao, acertos });
+// }
+
+// console.log();
+
+// apostadores.forEach((apostador) => {
+//   console.log(
+//     `O apostador do cartão ${apostador.numeroCartao} teve ${apostador.acertos} acertos`
+//   );
+
+//   if (apostador.acertos === 13) {
+//     console.log(
+//       `Apostador do cartão ${apostador.numeroCartao}: Parabéns, tu foi o GANHADOR`
+//     );
+//   }
+// });
+
+// ! ======================================= Exercício 37 ============================================
+// const prompt = require('prompt-sync')();
+
+// function lerVetorG(tamanho) {
+//   let vetorG = [];
+
+//   for (let i = 0; i < tamanho; i++) {
+//     let elemento;
+
+//     do {
+//       elemento = prompt(
+//         `Digite a ${i + 1}ª alternativa correta do gabarito da prova: `
+//       ).toLowerCase();
+
+//       if (elemento.length !== 1) {
+//         console.log('Digite apenas um único caracter!');
+//       }
+//     } while (elemento.length !== 1);
+
+//     vetorG.push(elemento);
+//   }
+
+//   return vetorG;
+// }
+
+// function contarAcertos(gabarito, respostas) {
+//   let acertos = 0;
+
+//   for (let i = 0; i < gabarito.length; i++) {
+//     if (gabarito[i] === respostas[i]) {
+//       acertos++;
+//     }
+//   }
+
+//   return acertos;
+// }
+
+// const gabarito = lerVetorG(20);
+// const numeroAlunos = 2;
+// const acertosAlunos = [];
+// const mediaAcertos = 12;
+
+// for (let i = 0; i < numeroAlunos; i++) {
+//   console.log(`Aluno ${i + 1}: `);
+//   const respostas = lerVetorG(20);
+//   const acertos = contarAcertos(gabarito, respostas);
+//   acertosAlunos.push(acertos);
+// }
+
+// console.log();
+// for (let i = 0; i < numeroAlunos; i++) {
+//   console.log(`Aluno ${i + 1} teve ${acertosAlunos[i]} acertos`);
+// }
+
+// console.log();
+
+// for (let i = 0; i < numeroAlunos; i++) {
+//   if (acertosAlunos[i] >= mediaAcertos) {
+//     console.log(`Aluno ${i + 1}: APROVADO`);
+//   } else {
+//     console.log(`Aluno ${i + 1}: 'REPROVADO'`);
+//   }
+// }
+
+// ! ======================================= Exercício 37 ============================================
