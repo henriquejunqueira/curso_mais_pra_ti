@@ -1362,3 +1362,100 @@
 // const vetorB = compactarVetorA(vetorA);
 
 // console.log(`Vetor compactador (B): ${vetorB}`);
+
+// ! ======================================= Exercício 40 ============================================
+// const prompt = require('prompt-sync')();
+
+// function lerVetor(tamanho, mensagem) {
+//   let vetorElementosInteiros = [];
+
+//   for (let i = 0; i < tamanho; i++) {
+//     vetorElementosInteiros.push(parseInt(prompt(`${mensagem} ${i + 1}: `)));
+//   }
+
+//   console.log();
+
+//   return vetorElementosInteiros;
+// }
+
+// function compararVetores(resultadoOficial, numeroAposta) {
+//   for (let i = 0; i < resultadoOficial.length; i++) {
+//     if (resultadoOficial[i] !== numeroAposta[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// const tamanho = 5;
+// const numeroApostadores = 5;
+
+// let resultadoOficial = lerVetor(tamanho, 'Resultado oficial - Digite o valor');
+// let apostas = [];
+
+// console.log();
+
+// for (let i = 0; i < numeroApostadores; i++) {
+//   const aposta = lerVetor(tamanho, `Apostador ${i + 1} - Digite o valor`);
+
+//   let ganhador = compararVetores(resultadoOficial, aposta);
+
+//   apostas.push({ numeroAposta: i + 1, ganhador });
+// }
+
+// console.log();
+
+// apostas.forEach((aposta) => {
+//   if (aposta.ganhador) {
+//     console.log(`Apostador ${aposta.numeroAposta}: Ganhador`);
+//   } else {
+//     console.log(`Apostador ${aposta.numeroAposta}: Não foi desta vez`);
+//   }
+// });
+
+// ! ======================================= Exercício 41 ============================================
+// const prompt = require('prompt-sync')();
+
+// const pessoa = {
+//   nome: 'Henrique',
+//   idade: 30,
+// };
+
+// console.log(`Idade: ${pessoa.idade}`);
+
+// pessoa.email = 'teste@teste.com';
+
+// console.log(pessoa);
+
+// ! ======================================= Exercício 42 ============================================
+const prompt = require('prompt-sync')();
+
+const dados = {
+  nome: 'Henrique',
+  idade: 30,
+  hobbies: ['programação', 'música', 'ler', 'jogar'],
+  numeros: [15, 8, 1994, 94],
+  bandas: [
+    'Black Sabbath',
+    'Metallica',
+    'Iron Maiden',
+    'Megadeth',
+    'Disturbed',
+  ],
+};
+
+function lerPropriedadesArray(dadosObjeto) {
+  let novoObjeto = {};
+
+  for (let chave in dadosObjeto) {
+    if (Array.isArray(dadosObjeto[chave])) {
+      novoObjeto[chave] = dadosObjeto[chave];
+    }
+  }
+
+  return novoObjeto;
+}
+
+let propriedadesNovoObjeto = lerPropriedadesArray(dados);
+
+console.log(propriedadesNovoObjeto);
