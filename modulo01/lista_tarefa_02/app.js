@@ -1253,4 +1253,112 @@
 //   }
 // }
 
-// ! ======================================= Exercício 37 ============================================
+// ! ======================================= Exercício 38 ============================================
+// const prompt = require('prompt-sync')();
+
+// const vetorElementos = [];
+// let operacao;
+
+// for (let i = 0; i < 6; i++) {
+//   vetorElementos[i] = parseFloat(prompt(`Digite o ${i + 1}º valor: `));
+// }
+
+// console.log();
+// console.log('Opções de operação:');
+// console.log('1 - Soma dos elementos');
+// console.log('2 - Produto dos elementos');
+// console.log('3 - Média dos elementos');
+// console.log('4 - Ordena os elementos em ordem crescente');
+// console.log('5 - Mostra o vetor de elementos');
+// console.log();
+
+// while (isNaN(operacao) || operacao < 1 || operacao > 5) {
+//   operacao = parseInt(prompt('Digite o número da operação desejada: '));
+// }
+
+// function somarElementos(vetorElementos) {
+//   let soma = 0;
+//   for (let elemento of vetorElementos) {
+//     soma += elemento;
+//   }
+//   return soma;
+// }
+
+// function calcularProduto(vetorElementos) {
+//   let produto = 1;
+//   for (let elemento of vetorElementos) {
+//     produto *= elemento;
+//   }
+
+//   return produto;
+// }
+
+// function calcularMedia(vetorElementos) {
+//   return somarElementos(vetorElementos) / vetorElementos.length;
+// }
+
+// function ordemCrescenteVetor(vetorElementos) {
+//   return vetorElementos.slice().sort((a, b) => a - b);
+// }
+
+// function mostrarVetorElementos(vetorElementos) {
+//   console.log(`Vetor: ${vetorElementos.join(', ')}`);
+// }
+
+// console.log();
+// switch (operacao) {
+//   case 1:
+//     console.log(`Soma dos elementos: ${somarElementos(vetorElementos)}`);
+//     break;
+//   case 2:
+//     console.log(`Produto dos elementos: ${calcularProduto(vetorElementos)}`);
+//     break;
+//   case 3:
+//     console.log(`Média dos elementos: ${calcularMedia(vetorElementos)}`);
+//     break;
+//   case 4:
+//     console.log(
+//       `Vetor ordenado em ordem crescente: ${ordemCrescenteVetor(
+//         vetorElementos
+//       )}`
+//     );
+//     break;
+//   case 5:
+//     mostrarVetorElementos(vetorElementos);
+//     break;
+//   default:
+//     console.log('Operação inválida!');
+// }
+
+// ! ======================================= Exercício 39 ============================================
+// const prompt = require('prompt-sync')();
+
+// function lerVetor(tamanhoVetorA) {
+//   let vetorA = [];
+
+//   for (let i = 0; i < tamanhoVetorA; i++) {
+//     vetorA.push(parseFloat(prompt(`Digite o ${i + 1}º valor: `)));
+//   }
+
+//   return vetorA;
+// }
+
+// function compactarVetorA(vetorA) {
+//   let vetorACompactado = [];
+
+//   for (let elemento of vetorA) {
+//     if (elemento > 0) {
+//       vetorACompactado.push(elemento);
+//     }
+//   }
+
+//   return vetorACompactado;
+// }
+
+// const tamanhoVetorA = 100;
+
+// const vetorA = lerVetor(tamanhoVetorA);
+
+// const vetorB = compactarVetorA(vetorA);
+
+// console.log(`Vetor compactador (B): ${vetorB}`);
