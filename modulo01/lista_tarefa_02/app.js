@@ -1428,34 +1428,120 @@
 // console.log(pessoa);
 
 // ! ======================================= Exercício 42 ============================================
-const prompt = require('prompt-sync')();
+// const prompt = require('prompt-sync')();
 
-const dados = {
-  nome: 'Henrique',
-  idade: 30,
-  hobbies: ['programação', 'música', 'ler', 'jogar'],
-  numeros: [15, 8, 1994, 94],
-  bandas: [
-    'Black Sabbath',
-    'Metallica',
-    'Iron Maiden',
-    'Megadeth',
-    'Disturbed',
-  ],
-};
+// const dados = {
+//   nome: 'Henrique',
+//   idade: 30,
+//   hobbies: ['programação', 'música', 'ler', 'jogar'],
+//   numeros: [15, 8, 1994, 94],
+//   bandas: [
+//     'Black Sabbath',
+//     'Metallica',
+//     'Iron Maiden',
+//     'Megadeth',
+//     'Disturbed',
+//   ],
+// };
 
-function lerPropriedadesArray(dadosObjeto) {
-  let novoObjeto = {};
+// function lerPropriedadesArray(dadosObjeto) {
+//   let novoObjeto = {};
 
-  for (let chave in dadosObjeto) {
-    if (Array.isArray(dadosObjeto[chave])) {
-      novoObjeto[chave] = dadosObjeto[chave];
-    }
-  }
+//   for (let chave in dadosObjeto) {
+//     if (Array.isArray(dadosObjeto[chave])) {
+//       novoObjeto[chave] = dadosObjeto[chave];
+//     }
+//   }
 
-  return novoObjeto;
-}
+//   return novoObjeto;
+// }
 
-let propriedadesNovoObjeto = lerPropriedadesArray(dados);
+// let propriedadesNovoObjeto = lerPropriedadesArray(dados);
 
-console.log(propriedadesNovoObjeto);
+// console.log(propriedadesNovoObjeto);
+
+// ! ======================================= Exercício 43 ============================================
+// const prompt = require('prompt-sync')();
+
+// let obj1 = {
+//   nome: 'Henrique',
+//   idade: 30,
+// };
+
+// let obj2 = {
+//   hobbies: ['programação', 'música', 'ler', 'jogar'],
+//   timeDoCoracao: 'Flamengo',
+// };
+
+// let obj3 = {};
+
+// function combinarObjetos(obj1, obj2) {
+//   return { ...obj1, ...obj2 };
+// }
+
+// obj3 = combinarObjetos(obj1, obj2);
+
+// console.log(obj3);
+
+// ! ======================================= Exercício 44 ============================================
+// const prompt = require('prompt-sync')();
+
+// let objetoConteudoVariado = {
+//   nome: 'Henrique',
+//   idade: 30,
+//   casado: false,
+//   arrayNumeros: [1, 2, 3, 4],
+//   estado: 'MG',
+//   time: 'Flamengo',
+//   mesNascimento: 'Agosto',
+// };
+
+// function contarPropStringObjeto(objetoConteudoVariado) {
+//   let contaString = 0;
+//   for (let prop in objetoConteudoVariado) {
+//     if (typeof objetoConteudoVariado[prop] === 'string') {
+//       contaString++;
+//     }
+//   }
+
+//   return contaString;
+// }
+
+// const contadorDeStrings = contarPropStringObjeto(objetoConteudoVariado);
+// console.log(contadorDeStrings);
+
+// ! ======================================= Exercício 45 ============================================
+// const prompt = require('prompt-sync')();
+
+// function contarOcorrencias(arrayDeFrutas) {
+//   let contagem = {};
+
+//   for (let stringArray of arrayDeFrutas) {
+//     if (contagem[stringArray]) {
+//       contagem[stringArray] += 1;
+//     } else {
+//       contagem[stringArray] = 1;
+//     }
+//   }
+
+//   return contagem;
+// }
+
+// const arrayDeFrutas = [
+//   'abacaxi',
+//   'maçã',
+//   'uva',
+//   'pera',
+//   'uva',
+//   'abacaxi',
+//   'pera',
+//   'uva',
+//   'abacaxi',
+//   'maçã',
+//   'mamão',
+// ];
+
+// const objetoContagem = contarOcorrencias(arrayDeFrutas);
+// console.log(objetoContagem);
+
+// ! ======================================= Exercício 46 ============================================
