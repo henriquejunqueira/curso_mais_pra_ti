@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #222222;
+  height: 60px;
+}
+
+#menu a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#containerImg img {
+  width: 250px;
+  height: 250px;
+}
+
+#containerBase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.paragraph {
+  margin: 10px 0;
+}

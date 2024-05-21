@@ -1,0 +1,103 @@
+h1 {
+  color: blue;
+}
+
+#container {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #6495ed;
+  padding: 20px;
+}
+
+#tituloPrincipal {
+  color: #ffffff;
+  text-align: center;
+}
+
+.linhaBrancaLista {
+  color: #222222;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.linhaBrancaLista:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.linhaPretaLista {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.linhaPretaLista:hover {
+  color: #222222;
+  cursor: pointer;
+}
+
+/* */
+
+.listaNaoOrdenado {
+  list-style-type: disc;
+}
+
+nav#menu {
+  border: 3px solid blue;
+  display: block;
+}
+
+nav#menu ul {
+  list-style-type: none;
+}
+
+nav#menu li {
+  border: 1px solid red;
+  display: inline-block;
+  background-color: black;
+  color: yellow;
+  padding: 10px;
+}
+
+nav#menu h1 {
+  display: none;
+}
+
+/* #containerTabela {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #6495ed;
+}
+
+#tabela tr th,
+#tabela tr td {
+  border: 1px solid #222222;
+  text-align: center;
+} */
+
+td,
+table {
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+}
+
+.primeiro {
+  color: red;
+}
+
+table#tabela {
+  border: 1px solid black;
+  width: 30%;
+  height: 30%;
+  border-spacing: 0px;
+  margin-left: auto;
+}
+
+table#tabela,
+td {
+  padding: 5px;
+  text-align: left;
+  vertical-align: middle;
+}

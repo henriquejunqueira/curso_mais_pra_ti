@@ -1545,3 +1545,295 @@
 // console.log(objetoContagem);
 
 // ! ======================================= Exercício 46 ============================================
+// const prompt = require('prompt-sync')();
+
+// const vendas = [
+//   {
+//     vendedor: 'Joao',
+//     valor: 100,
+//   },
+//   {
+//     vendedor: 'Ana',
+//     valor: 300,
+//   },
+//   {
+//     vendedor: 'Pedro',
+//     valor: 200,
+//   },
+//   {
+//     vendedor: 'Maria',
+//     valor: 150,
+//   },
+// ];
+
+// function sumarizarTotalVendas(vendas) {
+//   const totalVendasPorVendedor = {};
+
+//   for (let venda of vendas) {
+//     const vendedor = venda.vendedor;
+//     const valor = venda.valor;
+
+//     if (totalVendasPorVendedor[vendedor]) {
+//       totalVendasPorVendedor[vendedor] += valor;
+//     } else {
+//       totalVendasPorVendedor[vendedor] = valor;
+//     }
+//   }
+
+//   return totalVendasPorVendedor;
+// }
+
+// const resultado = sumarizarTotalVendas(vendas);
+// console.log(resultado);
+
+// ! ======================================= Exercício 47 ============================================
+// const prompt = require('prompt-sync')();
+
+// function transformarObjeto(objeto, funcao) {
+//   const novoObjeto = {};
+
+//   for (let propriedade in objeto) {
+//     novoObjeto[propriedade] = funcao(objeto[propriedade]);
+//   }
+
+//   return novoObjeto;
+// }
+
+// const objetoEntrada = {
+//   a: 10,
+//   b: 25,
+//   c: 34,
+// };
+
+// function dobrarValor(valor) {
+//   return valor * 2;
+// }
+
+// const objetoTransformado = transformarObjeto(objetoEntrada, dobrarValor);
+// console.log(objetoTransformado);
+
+// ! ======================================= Exercício 48 ============================================
+// const prompt = require('prompt-sync')();
+
+// let inventarioLojaA = {
+//   notebook: 10,
+//   ssd: 15,
+//   roteador: 28,
+//   carregadorCelular: 9,
+//   repetidor: 10,
+// };
+
+// let inventarioLojaB = {
+//   geladeira: 34,
+//   microondas: 12,
+//   televisao: 44,
+//   carregadorCelular: 5,
+//   repetidor: 10,
+// };
+
+// let inventarioGeral = {};
+
+// function combinarObjetos() {
+//   inventarioGeral = { ...inventarioLojaA };
+
+//   for (let item in inventarioLojaB) {
+//     if (inventarioGeral[item] !== undefined) {
+//       inventarioGeral[item] += inventarioLojaB[item];
+//     } else {
+//       inventarioGeral[item] = inventarioLojaB[item];
+//     }
+//   }
+
+//   return inventarioGeral;
+// }
+
+// console.log(combinarObjetos());
+
+// ! ======================================= Exercício 49 ============================================
+// const prompt = require('prompt-sync')();
+
+// let transacoesFinanceiras = [
+//   {
+//     id: 1,
+//     valor: 100,
+//     data: '20-05-2024',
+//     categoria: 'Alimentação',
+//   },
+//   {
+//     id: 2,
+//     valor: 150,
+//     data: '19-05-2024',
+//     categoria: 'Transporte',
+//   },
+//   {
+//     id: 3,
+//     valor: 200,
+//     data: '10-04-2024',
+//     categoria: 'Alimentação',
+//   },
+//   {
+//     id: 4,
+//     valor: 150,
+//     data: '12-03-2024',
+//     categoria: 'Lazer',
+//   },
+// ];
+
+// function organizarTransacoesFeitas(transacoesFinanceiras) {
+//   const categorias = {};
+
+//   transacoesFinanceiras.forEach((transacao) => {
+//     const { categoria, valor } = transacao;
+
+//     if (!categorias[categoria]) {
+//       categorias[categoria] = {
+//         transacoes: [],
+//         subtotal: 0,
+//       };
+//     }
+
+//     categorias[categoria].transacoes.push(transacao);
+
+//     categorias[categoria].subtotal += valor;
+//   });
+
+//   return categorias;
+// }
+
+// const transacoesOrganizadas = organizarTransacoesFeitas(transacoesFinanceiras);
+
+// for (let categoria in transacoesOrganizadas) {
+//   console.log(`Categoria: ${categoria}`);
+//   console.log(`Subtotal: ${transacoesOrganizadas[categoria].subtotal}`);
+
+//   transacoesOrganizadas[categoria].transacoes.forEach((transacao) => {
+//     console.log(
+//       ` - ID: ${transacao.id}, Valor: ${transacao.valor}, Data: ${transacao.data}`
+//     );
+//   });
+
+//   console.log();
+// }
+
+// ! ======================================= Exercício 50 ============================================
+const prompt = require('prompt-sync')();
+
+let hoteis = [];
+let reservas = [];
+let hotel;
+let cidade;
+let quartos;
+let id;
+let opcao;
+let sair;
+
+function gerarId() {
+  return '_' + Math.random().toString(36).substring(2, 9);
+}
+
+function adicionarHotel(id, nome, cidade, quartosTotais) {
+  const hotel = {
+    id: id,
+    nome: nome,
+    cidade: cidade,
+    quartosTotais: quartosTotais,
+    quartosDisponiveis: quartosTotais,
+  };
+
+  hoteis.push(hotel);
+  return id;
+}
+
+function buscarHoteisPorCidade(cidade) {
+  const hoteisEncontrados = hoteis.filter((hotel) => hotel.cidade === cidade);
+  return hoteisEncontrados.length > 0
+    ? hoteisEncontrados
+    : 'Nenhum hotel encontrado nessa cidade...';
+}
+
+function fazerReserva(idReserva, idHotel, nomeCliente) {
+  const hotel = hoteis.find((hotel) => hotel.id === idHotel);
+  if (hotel && hotel.quartosDisponiveis > 0) {
+    reservas.push({
+      idReserva: idReserva,
+      idHotel: idHotel,
+      nomeCliente: nomeCliente,
+    });
+    hotel.quartosDisponiveis--;
+    return 'Reserva feita com sucesso';
+  } else {
+    return 'Não há quartos disponíveis neste hotel';
+  }
+}
+
+function cancelarReserva(idReserva) {
+  const reserva = reservas.find((reserva) => reserva.idReserva === idReserva);
+
+  if (reserva) {
+    const hotel = hoteis.find((hotel) => hotel.id === reserva.idHotel);
+    hotel.quartosDisponiveis++;
+    reservas = reservas.filter((reserva) => reserva.idReserva !== idReserva);
+    return 'Reserva cancelada com sucesso';
+  } else {
+    return 'Reserva não encontrada';
+  }
+}
+
+function listarReservas() {
+  if (reservas.length > 0) {
+    reservas.forEach((reserva) => {
+      const hotel = hoteis.find((hotel) => hotel.id === reserva.idHotel);
+      console.log(`ID reserva: ${reserva.idReserva}`);
+      console.log(`Hotel: ${hotel.nome}`);
+      console.log(`Cliente: ${reserva.nomeCliente}`);
+    });
+  } else {
+    console.log('Não há reservas no momento...');
+  }
+}
+
+function acessarSistema() {
+  console.log('Opções do Sistema de Reservas de Hotéis:');
+  console.log('1 - Cadastrar hotel');
+  console.log('2 - Buscar hotel por cidade');
+  console.log('3 - Fazer reserva');
+  console.log('4 - Cancelar reserva');
+  console.log('5 - Listar reservas');
+  opcao = prompt('Digite o número da opção: ');
+
+  switch (opcao) {
+    case '1':
+      id = gerarId();
+      hotel = prompt('Digite o nome do hotel: ');
+      cidade = prompt('Digite o nome da cidade: ');
+      quartos = prompt('Digite a quantidade de quartos: ');
+      adicionarHotel(id, hotel, cidade, quartos);
+      break;
+    case '2':
+      cidade = prompt('Digite o nome da cidade: ');
+      buscarHoteisPorCidade(cidade);
+      break;
+    case '3':
+      id = gerarId();
+      hotel = prompt('Digite o nome do hotel: ');
+      cidade = prompt('Digite o nome da cidade: ');
+      cliente = prompt('Digite o nome do cliente: ');
+      fazerReserva(id, hotel, cliente);
+      break;
+    case '4':
+      id = prompt('Digite o ID da reserva: ');
+      cancelarReserva(id);
+      break;
+    case '5':
+      listarReservas();
+      break;
+    default:
+      console.log('Opção inválida!');
+  }
+}
+
+while (sair !== 'S') {
+  acessarSistema();
+
+  sair = prompt('Deseja sair do sistema? S/N: ').toUpperCase();
+}
