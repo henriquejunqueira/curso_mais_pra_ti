@@ -1,18 +1,18 @@
 // ! ======================================= Exercício 01 ============================================
-// const prompt = require('prompt-sync')();
+const prompt = require('prompt-sync')();
 
-// let cigarrosPorDia = prompt('Quantidade de cigarros fumados por dia: ');
-// let anosFumando = prompt('Quantos anos fumando? ');
-// let diasPorAno = 365;
-// let minutosPorDia = 1440;
-// let minutosDeVidaPorCigarro = 10;
+let cigarrosPorDia = prompt('Quantidade de cigarros fumados por dia: ');
+let anosFumando = prompt('Quantos anos fumando? ');
+let diasPorAno = 365;
+let minutosPorDia = 1440;
+let minutosDeVidaPorCigarro = 10;
 
-// let diasFumando = anosFumando * diasPorAno;
-// let totalCigarros = diasFumando * cigarrosPorDia;
+let diasFumando = anosFumando * diasPorAno;
+let totalCigarros = diasFumando * cigarrosPorDia;
 
-// let tempoPerdido = totalCigarros * minutosDeVidaPorCigarro;
-// let diasRestando = Number(tempoPerdido / minutosPorDia);
-// console.log(`Tempo de vida perdido: ${Math.round(diasRestando)} dias`);
+let tempoPerdido = totalCigarros * minutosDeVidaPorCigarro;
+let diasRestando = Number(tempoPerdido / minutosPorDia);
+console.log(`Tempo de vida perdido: ${Math.round(diasRestando)} dias`);
 
 // ! ======================================= Exercício 02 ============================================
 // const prompt = require('prompt-sync')();
@@ -1716,124 +1716,193 @@
 // }
 
 // ! ======================================= Exercício 50 ============================================
-const prompt = require('prompt-sync')();
+// const prompt = require('prompt-sync')();
 
-let hoteis = [];
-let reservas = [];
-let hotel;
-let cidade;
-let quartos;
-let id;
-let opcao;
-let sair;
+// let hotel = [
+//   {
+//     id: 1,
+//     nome: 'Hotel Vale',
+//     cidade: 'São Paulo',
+//     quartosTotais: 80,
+//     quartosDisponiveis: 80,
+//   },
+//   {
+//     id: 2,
+//     nome: 'Hotel Brasil',
+//     cidade: 'Belo Horizonte',
+//     quartosTotais: 50,
+//     quartosDisponiveis: 50,
+//   },
+//   {
+//     id: 3,
+//     nome: 'Hotel Primavera',
+//     cidade: 'Brasília',
+//     quartosTotais: 90,
+//     quartosDisponiveis: 90,
+//   },
+//   {
+//     id: 4,
+//     nome: 'Hotel Veraneio',
+//     cidade: 'Rio de Janeiro',
+//     quartosTotais: 70,
+//     quartosDisponiveis: 70,
+//   },
+// ];
 
-function gerarId() {
-  return '_' + Math.random().toString(36).substring(2, 9);
-}
+// let reserva = [];
 
-function adicionarHotel(id, nome, cidade, quartosTotais) {
-  const hotel = {
-    id: id,
-    nome: nome,
-    cidade: cidade,
-    quartosTotais: quartosTotais,
-    quartosDisponiveis: quartosTotais,
-  };
+// let sair;
+// let nome;
+// let cidade;
+// let quartosTotais;
+// let quartosDisponiveis;
 
-  hoteis.push(hotel);
-  return id;
-}
+// function primeiraLetraMaiuscula(letra) {
+//   return letra
+//     .toLowerCase()
+//     .split(' ')
+//     .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+//     .join(' ');
+// }
 
-function buscarHoteisPorCidade(cidade) {
-  const hoteisEncontrados = hoteis.filter((hotel) => hotel.cidade === cidade);
-  return hoteisEncontrados.length > 0
-    ? hoteisEncontrados
-    : 'Nenhum hotel encontrado nessa cidade...';
-}
+// function adicionarHotel(nome, cidade, quartosTotais, quartosDisponiveis) {
+//   const novoHotel = {
+//     id: hotel.length + 1,
+//     nome: primeiraLetraMaiuscula(nome),
+//     cidade: primeiraLetraMaiuscula(cidade),
+//     quartosTotais: Number(quartosTotais),
+//     quartosDisponiveis: Number(quartosDisponiveis),
+//   };
 
-function fazerReserva(idReserva, idHotel, nomeCliente) {
-  const hotel = hoteis.find((hotel) => hotel.id === idHotel);
-  if (hotel && hotel.quartosDisponiveis > 0) {
-    reservas.push({
-      idReserva: idReserva,
-      idHotel: idHotel,
-      nomeCliente: nomeCliente,
-    });
-    hotel.quartosDisponiveis--;
-    return 'Reserva feita com sucesso';
-  } else {
-    return 'Não há quartos disponíveis neste hotel';
-  }
-}
+//   hotel.push(novoHotel);
 
-function cancelarReserva(idReserva) {
-  const reserva = reservas.find((reserva) => reserva.idReserva === idReserva);
+//   console.log('Hotel adicionado!');
 
-  if (reserva) {
-    const hotel = hoteis.find((hotel) => hotel.id === reserva.idHotel);
-    hotel.quartosDisponiveis++;
-    reservas = reservas.filter((reserva) => reserva.idReserva !== idReserva);
-    return 'Reserva cancelada com sucesso';
-  } else {
-    return 'Reserva não encontrada';
-  }
-}
+//   return hotel;
+// }
 
-function listarReservas() {
-  if (reservas.length > 0) {
-    reservas.forEach((reserva) => {
-      const hotel = hoteis.find((hotel) => hotel.id === reserva.idHotel);
-      console.log(`ID reserva: ${reserva.idReserva}`);
-      console.log(`Hotel: ${hotel.nome}`);
-      console.log(`Cliente: ${reserva.nomeCliente}`);
-    });
-  } else {
-    console.log('Não há reservas no momento...');
-  }
-}
+// function buscarHoteisPorCidade(cidade) {
+//   const hoteisEncontrados = hotel.filter((hotel) => {
+//     return hotel.cidade === cidade;
+//   });
 
-function acessarSistema() {
-  console.log('Opções do Sistema de Reservas de Hotéis:');
-  console.log('1 - Cadastrar hotel');
-  console.log('2 - Buscar hotel por cidade');
-  console.log('3 - Fazer reserva');
-  console.log('4 - Cancelar reserva');
-  console.log('5 - Listar reservas');
-  opcao = prompt('Digite o número da opção: ');
+//   if (hoteisEncontrados.length > 0) {
+//     console.log(`Hotéis encontrados na cidade ${cidade}:`);
 
-  switch (opcao) {
-    case '1':
-      id = gerarId();
-      hotel = prompt('Digite o nome do hotel: ');
-      cidade = prompt('Digite o nome da cidade: ');
-      quartos = prompt('Digite a quantidade de quartos: ');
-      adicionarHotel(id, hotel, cidade, quartos);
-      break;
-    case '2':
-      cidade = prompt('Digite o nome da cidade: ');
-      buscarHoteisPorCidade(cidade);
-      break;
-    case '3':
-      id = gerarId();
-      hotel = prompt('Digite o nome do hotel: ');
-      cidade = prompt('Digite o nome da cidade: ');
-      cliente = prompt('Digite o nome do cliente: ');
-      fazerReserva(id, hotel, cliente);
-      break;
-    case '4':
-      id = prompt('Digite o ID da reserva: ');
-      cancelarReserva(id);
-      break;
-    case '5':
-      listarReservas();
-      break;
-    default:
-      console.log('Opção inválida!');
-  }
-}
+//     hoteisEncontrados.forEach((hotel) => {
+//       console.log(`Id: ${hotel.id}`);
+//       console.log(`Nome: ${hotel.nome}`);
+//       console.log(`Quartos disponíveis: ${hotel.quartosDisponiveis}`);
+//     });
+//   } else {
+//     console.log(`Nenhum hotel encontrado na cidade ${cidade}`);
+//   }
+// }
 
-while (sair !== 'S') {
-  acessarSistema();
+// function fazerReserva(idHotel, nomeCliente) {
+//   const hotelReserva = hotel.find((hotel) => hotel.id === idHotel);
 
-  sair = prompt('Deseja sair do sistema? S/N: ').toUpperCase();
-}
+//   if (!hotelReserva) {
+//     return 'Hotel não encontrado';
+//   }
+
+//   if (hotelReserva.quartosDisponiveis > 0) {
+//     const idReserva = reserva.length + 1;
+//     reserva.push({
+//       idReserva: idReserva,
+//       idHotel: idHotel,
+//       nomeCliente: primeiraLetraMaiuscula(nomeCliente),
+//     });
+
+//     hotelReserva.quartosDisponiveis--;
+
+//     return 'Reserva feita!';
+//   } else {
+//     return 'Não há quartos disponíveis neste hotel...';
+//   }
+// }
+
+// function cancelarReserva(idReserva) {
+//   const reservaHotelCliente = reserva.findIndex(
+//     (res) => res.idReserva == idReserva
+//   );
+
+//   if (reservaHotelCliente > -1) {
+//     const hotelReserva = hotel.find(
+//       (h) => h.id === reserva[reservaHotelCliente].idHotel
+//     );
+//     hotelReserva.quartosDisponiveis++;
+//     reserva.splice(reservaHotelCliente, 1);
+//     console.log('Reserva do cancelada!');
+//   } else {
+//     console.log('Reserva não encontrada...');
+//   }
+// }
+
+// function listarReservas() {
+//   if (reserva.length > 0) {
+//     reserva.forEach((reservaHotel) => {
+//       const hotelReservado = hotel.find(
+//         (hotel) => hotel.id === reservaHotel.idHotel
+//       );
+
+//       if (hotelReservado) {
+//         console.log(`Reserva ID: ${reservaHotel.idReserva}`);
+//         console.log(`Hotel: ${hotelReservado.nome}`);
+//         console.log(`Cliente: ${reservaHotel.nomeCliente}`);
+//       } else {
+//         console.log('Não existem reservas...');
+//       }
+//     });
+//   } else {
+//     console.log('Nenhuma reserva encontrada...');
+//   }
+// }
+
+// function acessarSistema() {
+//   let opcao;
+
+//   console.log('Opções do Sistema de Reservas de Hotéis:');
+//   console.log('1 - Cadastrar hotel');
+//   console.log('2 - Buscar hotel por cidade');
+//   console.log('3 - Fazer reserva');
+//   console.log('4 - Cancelar reserva');
+//   console.log('5 - Listar reservas');
+//   opcao = prompt('Digite o número da opção: ');
+
+//   switch (opcao) {
+//     case '1':
+//       nome = prompt('Digite o nome do hotel: ');
+//       cidade = prompt('Digite o nome da cidade: ');
+//       quartosTotais = parseInt(prompt('Digite a quantidade de quartos: '));
+//       quartosDisponiveis = parseInt(
+//         prompt('Digite a quantidade de quartos disponíveis: ')
+//       );
+//       adicionarHotel(nome, cidade, quartosTotais, quartosDisponiveis);
+//       break;
+//     case '2':
+//       cidade = prompt('Digite o nome da cidade: ');
+//       buscarHoteisPorCidade(primeiraLetraMaiuscula(cidade));
+//       break;
+//     case '3':
+//       const idHotelReserva = parseInt(prompt('Digite o ID do hotel: '));
+//       const nomeClienteReserva = prompt('Digite o nome do cliente: ');
+//       fazerReserva(idHotelReserva, primeiraLetraMaiuscula(nomeClienteReserva));
+//       break;
+//     case '4':
+//       id = prompt('Digite o ID da reserva: ');
+//       cancelarReserva(id);
+//       break;
+//     case '5':
+//       listarReservas();
+//       break;
+//     default:
+//       console.log('Opção inválida!');
+//   }
+// }
+
+// while (sair !== 'S') {
+//   acessarSistema();
+
+//   sair = prompt('Deseja sair do sistema? S/N: ').toUpperCase();
+// }
