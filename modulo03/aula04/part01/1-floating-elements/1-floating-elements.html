@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Floating Elements</title>
+    <style type="text/css">
+      /* .content {
+        background-color: green;
+        border: 1px solid red;
+        width: 200px;
+        height: 150px;
+        float: right;
+        float: left;
+      }
+
+      .content1 {
+        background-color: yellowgreen;
+        border: 1px solid blue;
+        width: 150px;
+        height: 150px;
+        float: right;
+        float: left;
+      } */
+
+      /* Essa classe está limpando a flutuação na direita */
+      /* .clear {
+        clear: right;
+      } */
+
+      body {
+        background-color: #f4f4f4;
+      }
+
+      #principal {
+        width: 920px;
+        border: 3px solid red;
+        background-color: green;
+      }
+
+      #galeria {
+        border: 3px solid red;
+        width: 1600px;
+        margin-top: 5px;
+        background-color: yellow;
+      }
+
+      .noticia {
+        background-color: #e5e5e5;
+        padding: 5px;
+        width: 280px;
+        margin: 7px;
+        float: left;
+      }
+
+      .imagens-galeria {
+        background-color: #ffffff;
+        width: 265px;
+        padding: 5px;
+        margin: 15px;
+        float: left;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="content1">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    </div>
+    <div class="content">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    </div>
+    <div class="content">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    </div>
+    <p class="clear">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ea,
+      cupiditate magnam, quaerat saepe corporis quae mollitia maxime nisi, harum
+      sint itaque. Cumque quos, hic qui molestias voluptates harum nihil.
+    </p> -->
+
+    <div id="principal">
+      <div class="noticia">
+        <h2>Notícias do tricolor.</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa vero
+          enim autem inventore quidem illum natus consequuntur voluptatibus
+          fugit harum, in tempora vitae iusto veniam similique dolorum a. Error,
+          dolore!
+        </p>
+        <a href="#">veja mais</a>
+      </div>
+      <div class="noticia">
+        <h2>Notícias do tricolor.</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa vero
+          enim autem inventore quidem illum natus consequuntur voluptatibus
+          fugit harum, in tempora vitae iusto veniam similique dolorum a. Error,
+          dolore!
+        </p>
+        <a href="#">veja mais</a>
+      </div>
+      <div class="noticia">
+        <h2>Notícias do tricolor.</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa vero
+          enim autem inventore quidem illum natus consequuntur voluptatibus
+          fugit harum, in tempora vitae iusto veniam similique dolorum a. Error,
+          dolore!
+        </p>
+        <a href="#">veja mais</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <div id="galeria">
+      <div class="imagens-galeria">
+        <img src="../images/image1.png" alt="" />
+      </div>
+      <div class="imagens-galeria">
+        <img src="../images/image2.png" alt="" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <div class="imagens-galeria">
+        <img src="../images/image3.png" alt="" />
+        <p>Texto importante</p>
+      </div>
+      <div class="imagens-galeria">
+        <img src="../images/image4.png" alt="" />
+      </div>
+      <div class="imagens-galeria">
+        <img src="../images/image5.png" alt="" />
+      </div>
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Estatico, relativo, absoluto e fixo</title>
+    <style type="text/css">
+      h1 {
+        position: static;
+      }
+
+      p {
+        width: 400px;
+      }
+      #container {
+        background-color: #fff;
+        width: 800px;
+        margin: 10px auto;
+        padding: 10px;
+        /* position: relative;
+        border: 3px solid black;
+        top: 20px; */
+        position: absolute;
+        border: 3px soid black;
+      }
+
+      .relative {
+        border: 3px solid red;
+        position: relative;
+        /* top: 10px; */
+        left: 100px;
+      }
+
+      .absolute {
+        border: 3px solid green;
+        background-color: #f2f2f2;
+        position: absolute;
+        /* top: 80px; */
+        left: 100px;
+      }
+
+      .fixed {
+        border: 3px solid brown;
+        background-color: #f2f2f2;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Posicionamentos</h1>
+
+      <p class="relative">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, beatae
+        consequatur quibusdam delectus ab voluptates at explicabo dolorum quae
+        et laudantium maxime accusamus nostrum. Atque cum dolor reiciendis.
+        Voluptates, ea. Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Vel, beatae consequatur quibusdam delectus ab voluptates at
+        explicabo dolorum quae et laudantium maxime accusamus nostrum. Atque cum
+        dolor reiciendis. Voluptates, ea. Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Vel, beatae consequatur quibusdam delectus
+        ab voluptates at explicabo dolorum quae et laudantium maxime accusamus
+        nostrum. Atque cum dolor reiciendis. Voluptates, ea.
+      </p>
+      <p class="absolute">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+        labore nulla obcaecati explicabo alias nobis temporibus beatae
+        reiciendis esse cum ea quasi dolor dolores enim repellendus, adipisci
+        mollitia modi iste. Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Vel, beatae consequatur quibusdam delectus ab voluptates at
+        explicabo dolorum quae et laudantium maxime accusamus nostrum. Atque cum
+        dolor reiciendis. Voluptates, ea. Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Vel, beatae consequatur quibusdam delectus
+        ab voluptates at explicabo dolorum quae et laudantium maxime accusamus
+        nostrum. Atque cum dolor reiciendis. Voluptates, ea.
+      </p>
+
+      <p class="fixed">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quae
+        maxime quidem vel corporis quasi excepturi consequatur officiis quam et,
+        adipisci, ipsam sed velit laboriosam recusandae asperiores facilis.
+        Explicabo, repellendus? Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Vel, beatae consequatur quibusdam delectus ab
+        voluptates at explicabo dolorum quae et laudantium maxime accusamus
+        nostrum. Atque cum dolor reiciendis. Voluptates, ea. Lorem ipsum dolor,
+        sit amet consectetur adipisicing elit. Vel, beatae consequatur quibusdam
+        delectus ab voluptates at explicabo dolorum quae et laudantium maxime
+        accusamus nostrum. Atque cum dolor reiciendis. Voluptates, ea.
+      </p>
+    </div>
+  </body>
+</html>
