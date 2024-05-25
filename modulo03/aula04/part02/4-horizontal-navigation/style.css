@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+#content {
+  background-color: #222222;
+  height: 50px;
+  text-align: center;
+}
+
+#content ul {
+  list-style: none;
+}
+
+#content li {
+  float: inline-start;
+  margin-top: 20px;
+}
+
+#content a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#content a:hover {
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+}
