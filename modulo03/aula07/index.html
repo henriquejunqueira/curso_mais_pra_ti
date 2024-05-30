@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inserindo JS</title>
+    <script>
+      //   let numero = prompt('Digite um número');
+
+      //   if (numero % 2 === 0) {
+      //     document.write('<h1>Olá, o número que você digitou é par <h1>');
+      //   }
+
+      // Exercício 01
+      //   let nome = prompt('Qual seu nome? ');
+      //   let idade = parseInt(prompt('Qual sua idade? '));
+      //   document.write(`<h2>Seu nome é ${nome} e sua idade é ${idade}</h2>`);
+
+      // ==================================================================
+
+      //   let nota1 = parseFloat(prompt('Primeira nota: '));
+      //   let nota2 = parseFloat(prompt('Segunda nota: '));
+      //   let media = (nota1 + nota2) / 2;
+      //   document.write(
+      //     `<h2>A primeira nota é: ${nota1}\n a segunda nota é: ${nota2} e a média das notas é: ${media}</h2>`
+      //   );
+
+      //   function eventoMouse() {
+      //     document.write('Evento Aconteceu!');
+      //   }
+
+      //   function eventoTeclado() {
+      //     document.write('Evento teclado aconteceu!');
+      //   }
+
+      //   function eventoJanela() {
+      //     document.write('Evento teclado aconteceu!');
+      //   }
+    </script>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <!-- onresize="eventoJanela()" -->
+    <!-- * <input type="text" placeholder="Teste" id="nome" disabled /> -->
+    <!-- * <script src="script.js"></script> -->
+
+    <!-- <div
+      style="background-color: blue; height: 200px; width: 200px" onclick="eventoMouse()"
+    ></div> -->
+    <!-- <div
+      style="background-color: blue; height: 200px; width: 200px"
+      onDblclick="eventoMouse()"
+    ></div> -->
+
+    <!-- <div
+      style="background-color: blue; height: 200px; width: 200px"
+      onmouseover="eventoMouse()"
+    ></div> -->
+
+    <!-- <input type="text" onkeyDown="eventoTeclado()" /> -->
+    <!-- <input type="text" onkeyup="eventoTeclado()" /> -->
+    <!-- <input type="text" onkeypress="eventoTeclado()" /> -->
+
+    <!-- <select onchange="eventoJanela()">
+        <option value="10">Grêmio</option>
+        <option value="2">Flamengo</option>
+    </select> -->
+
+    <!-- <select onfocus="eventoJanela()">
+        <option value="10">Grêmio</option>
+        <option value="2">Flamengo</option>
+    </select> -->
+
+    <!-- <select onblur="eventoJanela()">
+        <option value="10">Grêmio</option>
+        <option value="2">Flamengo</option>
+    </select> -->
+
+    <!-- ? onclick executa o evento quando o elemento é clicado -->
+    <!-- ? onDblclick executa o evento quando o elemento é clicado duas vezes -->
+    <!-- ? onmouseover executa o evento quando o mouse passa sobre o elemento -->
+    <!-- ? onkeyDown executa quando a tecla pra cima é clicada, nesse caso 's' -->
+    <!-- ? onkeyup executa quando a tecla pra baixo é clicada, nesse caso 'w' -->
+    <!-- ? onkeypress executa quando qualquer tecla é clicada -->
+    <!-- ? onresize -->
+    <!-- ? onchange -->
+    <!-- ? onfocus executa quando seleciona o elemento, quando ele ganha foco -->
+    <!-- ? onblur executa quando tira o foco do elemento -->
+
+    <div class="container">
+      <form name="formulario">
+        <table>
+          <tr>
+            <td colspan="4">
+              <input
+                type="text"
+                maxlength=""
+                class="resultado"
+                name="tela"
+                readonly
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="C"
+                class="botao"
+                onclick="limparTela()"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="del"
+                class="botao"
+                onclick="deletar()"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="1"
+                class="botao"
+                onclick="inserir(1)"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="2"
+                class="botao"
+                onclick="inserir(2)"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="3"
+                class="botao"
+                onclick="inserir(3)"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="+"
+                class="botao"
+                onclick="inserir('+')"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="4"
+                class="botao"
+                onclick="inserir(4)"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="5"
+                class="botao"
+                onclick="inserir(5)"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="6"
+                class="botao"
+                onclick="inserir(6)"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="-"
+                class="botao"
+                onclick="inserir('-')"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="7"
+                class="botao"
+                onclick="inserir(7)"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="8"
+                class="botao"
+                onclick="inserir(7)"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="9"
+                class="botao"
+                onclick="inserir(9)"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="*"
+                class="botao"
+                onclick="inserir('*')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="."
+                class="botao"
+                onclick="inserir('.')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="0"
+                class="botao"
+                onclick="inserir(0)"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="="
+                class="botao"
+                onclick="calcularTotal('=')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="/"
+                class="botao"
+                onclick="inserir('/')"
+              />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+  <!-- onscroll="eventoJanela()" -->
+  <script src="script.js"></script>
+</html>
