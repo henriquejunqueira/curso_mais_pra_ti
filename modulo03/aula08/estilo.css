@@ -1,0 +1,11 @@
+.estilo {
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+}
+
+#quadrado {
+  border: solid 1px #000;
+  width: 100px;
+  height: 100px;
+}

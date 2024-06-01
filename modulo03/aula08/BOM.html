@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Browser Object Model</title>
+    <script>
+      //   let janela;
+      //   function popUp() {
+      // janela = window.open(
+      //   'https://www.google.com',
+      //   'nova_janela',
+      //   'width=200'
+      // );
+      //     janela = window.open(
+      //       '',
+      //       'https://www.google.com.br',
+      //       '__blank',
+      //       'width=200'
+      //     );
+      //   }
+
+      //   function closePopUp() {
+      //     window.close();
+      //   }
+
+      //   let altura = window.screen.availHeight;
+      //   let largura = window.screen.availWidth;
+
+      //   document.write('Altura do navegador: ' + altura + '<br />');
+      //   document.write('Largura do navegador: ' + largura + '<br />');
+
+      //   window.setTimeout(() => {
+      //     document.write('Grêmio <br />');
+      //   }, 1000);
+
+      //   let i = 10;
+      //   let x = window.setInterval(() => {
+      //     document.write(i + '<br />');
+      //     i--;
+      //     if (i === 0) {
+      //       clearInterval(x);
+      //     }
+      //   }, 1000);
+
+      let contador = 0;
+      let contagemTela = document.getElementById('#contador');
+
+      let temporizador = window.setInterval(() => {
+        contagemTela.textContent = contador;
+        contador++;
+        if (contador === 10) {
+          clearInterval(temporizador);
+        }
+      }, 2000);
+
+      let video = Array();
+      video[1] = Array();
+      video[1]['Nome'] = 'Fullmetal Alchimist';
+      video[1]['Categoria'] = 'Anime';
+
+      console.log(video);
+
+      function getVideo(video) {
+        try {
+          console.log(video[0]['nome']);
+          console.log('A apicação não morreu');
+        } catch (error) {
+          tratarErro(error);
+          console.log('Houve um problema externo.');
+          //   throw new Error(
+          //     'Houve um erro, mas já estamos trabalhando na solução'
+          //   );
+        } finally {
+          console.log('Sempre passa por aqui');
+        }
+
+        function tratarErro(erro) {
+          console.log('O erro é: ' + erro);
+        }
+
+        getVideo(video);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="contador"></div>
+    <!-- <button onclick="popUp()">Abrir uma janela</button>
+    <button onclick="closePopUp()">Fechar uma janela</button>
+    <button onclick="window.print()">Imprimir uma página</button> -->
+
+    <!-- <button onclick="window.location.href = 'http://www.google.com.br'">
+      Acessar
+    </button> -->
+  </body>
+</html>
