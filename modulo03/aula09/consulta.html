@@ -6,7 +6,7 @@
     <title>Consulta de Produtos</title>
     <link rel="stylesheet" href="estilo.css" />
   </head>
-  <body>
+  <body onload>
     <header>
       <nav>
         <ul id="menu">
@@ -17,7 +17,21 @@
     </header>
     <main>
       <div class="container-main">
+        <form>
+          <input type="text" id="description" />
+          <button type="button" onclick="searchTasks()">Pesquisar</button>
+        </form>
         <h1>Lista de Produtos Cadastrados</h1>
+        <table class="produtosCadastrados">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Qtd Estoque</th>
+            </tr>
+          </thead>
+          <tbody id="listTasks"></tbody>
+        </table>
       </div>
     </main>
   </body>

@@ -77,3 +77,11 @@ ul#menu {
   background-color: #15616d;
   transition: 0.4s;
 }
+
+.produtosCadastrados {
+  margin: 0 auto;
+}
+
+.produtosCadastrados thead tr {
+  margin: 10px 20px;
+}
