@@ -100,7 +100,7 @@ function registerTask() {
 }
 
 function loadTasks(tasks) {
-  if (tasks.length === undefined) {
+  if (tasks === undefined) {
     return tasks;
   }
 
@@ -110,9 +110,9 @@ function loadTasks(tasks) {
   tasks.forEach((t) => {
     const row = listTasks.insertRow();
 
-    row.insertCell(
-      0
-    ).innerHTML = `<td>${t.nomeProduto} ${t.precoProduto} ${t.qtdEstoque}`;
+    row.insertCell(0).innerHTML = `${t.nomeProduto}`;
+    row.insertCell(1).innerHTML = `${t.precoProduto}`;
+    row.insertCell(2).innerHTML = `${t.qtdEstoque}`;
 
     const btn = document.createElement('button');
 
@@ -126,7 +126,7 @@ function loadTasks(tasks) {
       window.location.reload();
     };
 
-    row.insertCell(1).append(btn);
+    row.insertCell(3).append(btn);
   });
 }
 
