@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,900;0,600&display=swap');
+
+/* * Variáveis CSS */
+:root {
+  --darkBlue: #003049;
+  --red: #d62828;
+  --orange: #f77f00;
+  --yellow: #fcbf49;
+  --eveYellow: #eae2b7;
+  --eveWhite: #fffafa;
+  --white: #ffffff;
+  --eveBlack: #222222;
+  --black: #000000;
+
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+  --line-height: 1.5rem;
+}
+
+/* * Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s ease-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* * Barra de navegação */
+nav {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 2px 2px var(--eveBlack);
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--darkBlue);
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-item {
+  list-style-type: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--darkBlue);
+  font-weight: var(--bold-font);
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--red);
+  transition: 0.5s;
+}
+
+/* * Theme Switcher */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+label {
+  width: 50px;
+  height: 29px;
+  background-color: var(--eveBlack);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding: 6px;
+  position: relative;
+}
+
+.theme-switch {
+}
+
+.moon {
+  color: var(--yellow);
+}
+
+.sun {
+  color: var(--orange);
+}
+
+.switcher {
+  background-color: var(--white);
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.checkbox:checked + .label .switcher {
+  transform: translateX(23px);
+}
+
+/* * End Theme Switcher */
+
+/* * Main */
+.firstSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 2rem auto -6rem;
+  max-width: 1100px;
+}
+
+.intro-text span {
+  font-size: 3rem;
+}
+
+.intro-text p {
+  line-height: var(--line-height);
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 0.5rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.red {
+  background-color: var(--red);
+  margin-right: 1.5rem;
+}
+
+.blue {
+  background-color: var(--darkBlue);
+}
+
+.red:hover {
+  background-color: var(--orange);
+  color: var(--eveWhite);
+}
+
+.blue:hover {
+  background-color: var(--eveYellow);
+  color: var(--eveWhite);
+}
+
+/* * Iframe */
+iframe {
+  max-width: 30rem;
+  /* border-top: 40px groove var(--darkBlue);
+  border-bottom: 40px groove var(--darkBlue);
+  border-right: 23px solid var(--red);
+  border-left: 23px solid var(--red); */
+
+  border: 40px groove var(--darkBlue);
+
+  .stand-1 {
+    height: 90px;
+    width: 5px;
+    background-color: var(--darkBlue);
+    transform: rotate(40deg);
+    position: relative;
+    top: -15px;
+    left: 200px;
+  }
+
+  .stand-2 {
+    height: 90px;
+    width: 5px;
+    background-color: var(--darkBlue);
+    transform: rotate(40deg);
+    position: relative;
+    top: -105px;
+    left: 250px;
+  }
+}
+
+/* * End Section 1*/
+
+/* * Section -2*/
+.secondSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 2rem auto -6rem;
+  max-width: 1100px;
+}
+
+.grid-one-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+}
+
+.grid-heading {
+  margin: 1rem;
+}
+
+.grid-description {
+  padding-bottom: 5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.grid h3 {
+  font-size: 3rem;
+  position: relative;
+  padding-left: 5rem;
+  padding-bottom: 2rem;
+}
+
+/* .grid h3::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: 8rem;
+  font-style: italic;
+  top: -4rem;
+  left: -2rem;
+  transform: rotate(5deg);
+} */
