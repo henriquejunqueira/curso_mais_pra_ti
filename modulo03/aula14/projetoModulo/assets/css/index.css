@@ -92,9 +92,6 @@ label {
   position: relative;
 }
 
-.theme-switch {
-}
-
 .moon {
   color: var(--yellow);
 }
