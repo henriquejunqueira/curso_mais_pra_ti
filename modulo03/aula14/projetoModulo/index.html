@@ -6,7 +6,7 @@
     <title>Projeto</title>
     <link rel="stylesheet" href="assets/css/index.css" />
   </head>
-  <body>
+  <body onload="carrossel01()">
     <header>
       <nav>
         <a href="#" class="logo">
@@ -74,12 +74,12 @@
         </div>
       </section>
 
-      <section class="secondSection grid-one">
+      <!-- <section class="secondSection grid-one">
         <div class="grid-one-content">
           <h2 class="grid-heading">My GRID</h2>
           <p class="grid-description">Descrição</p>
           <div class="grid">
-            <article>
+            <article class="artigo" id="artigo01">
               <h3>Título 1</h3>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -90,7 +90,7 @@
                 nesciunt ab nobis quibusdam incidunt illum distinctio iure?
               </p>
             </article>
-            <article>
+            <article class="artigo" id="artigo02">
               <h3>Título 2</h3>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -101,7 +101,7 @@
                 nesciunt ab nobis quibusdam incidunt illum distinctio iure?
               </p>
             </article>
-            <article>
+            <article class="artigo" id="artigo03">
               <h3>Título 3</h3>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -114,8 +114,30 @@
             </article>
           </div>
         </div>
+      </section> -->
+
+      <section class="secondSection">
+        <div class="carousel">
+          <div class="faixaEsquerda faixa">
+            <button class="flecha" onclick="next()">&lt;</button>
+          </div>
+          <div class="divImagemLeft">
+            <img src="./assets/img/livro1.jpg" alt="" id="space1" />
+            <img src="./assets/img/livro2.jpg" alt="" id="space2" />
+            <img src="./assets/img/livro3.jpg" alt="" id="space3" />
+          </div>
+          <div class="faixaDireita faixa">
+            <button class="flecha" onclick="back()">&gt;</button>
+          </div>
+        </div>
       </section>
     </main>
+
+    <!-- <footer>
+      <div>
+        <p>Desenvolvido por Henrique Junqueira - 2024</p>
+      </div>
+    </footer> -->
 
     <script
       type="module"

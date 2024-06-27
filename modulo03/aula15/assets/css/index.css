@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.imagem {
+  width: 100%;
+  height: 250px;
+}
+
+.imagem-card {
+  width: 50%;
+  height: 150px;
+}
+
+.barra-menu {
+  background-color: #222222;
+  color: #fffafa;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin-top: 20px;
+}
+
+.caixa {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.livro {
+  text-align: center;
+}
+
+.contato {
+  display: flex;
+  justify-content: center;
+}
