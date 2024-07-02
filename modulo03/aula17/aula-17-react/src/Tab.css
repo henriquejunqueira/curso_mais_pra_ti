@@ -1,0 +1,29 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #181c1f;
+}
+
+.caixa {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.imgLogo {
+	width: 50px;
+}
+
+.logo {
+	display: flex;
+	gap: 2rem;
+}
+
+.logo h1 {
+	color: #fffafa;
+}
+.lista {
+	color: #ffffff;
+}
