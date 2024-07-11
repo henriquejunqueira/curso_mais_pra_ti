@@ -10,6 +10,7 @@ function News() {
 	const [news, setNews] = useState(null);
 	const [idNews, setIdNews] = useState(1);
 
+	// ! o useEffect é executado quando o componente é montado
 	useEffect(() => {
 		const fetchNewsData = async () => {
 			const response = await fetch(
@@ -17,17 +18,17 @@ function News() {
 			);
 
 			const newsData = await response.json();
-			setNews(newsData);
+			setNews(newsData); // ! atualiza o
 		};
 
 		const timerUpdateNews = setInterval(() => {
+			fetchNewsData();
 			setIdNews((prevCount) => prevCount + 1);
 		}, 3000);
 
-		fetchNewsData();
-
 		return () => {
 			clearInterval(timerUpdateNews);
+			setNews(null);
 		};
 	}, [idNews]);
 
