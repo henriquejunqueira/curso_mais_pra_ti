@@ -1,0 +1,13 @@
+body {
+	background-color: #f3f0f0;
+}
+
+.container {
+	width: 800px;
+	height: 300px;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: #222222;
+	color: #fffafa;
+	text-align: center;
+}
