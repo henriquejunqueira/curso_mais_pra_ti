@@ -1,0 +1,87 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100vh;
+	color: #ffffff;
+
+	font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+		sans-serif;
+}
+
+.caixa {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	gap: 1rem;
+
+	background-color: #000000;
+	opacity: 70%;
+	width: 400px;
+	padding-bottom: 20px;
+	padding-left: 40px;
+
+	border-radius: 5px;
+}
+
+.caixa-texto {
+	width: 295px;
+	height: 40px;
+
+	background-color: #000000;
+	color: #ffffff;
+	border-radius: 5px;
+}
+
+.botao {
+	width: 300px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+}
+
+#botao-entrar {
+	background-color: #e53322;
+	color: #ffffff;
+}
+
+#botao-codigo-acesso {
+	background-color: #322e2d;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.link {
+	color: #ffffff;
+}
+
+#recaptcha {
+	font-size: 12px;
+}
+
+#recaptcha a {
+	color: blue;
+	text-decoration: none;
+}
+
+h2 {
+	margin-top: 20px;
+	display: flex;
+	justify-content: left;
+}
+
+h4,
+#recuperarSenha {
+	text-align: center;
+	padding-right: 60px;
+}
+
+a {
+	text-decoration: none;
+}
+
+#assineAgora {
+	font-weight: 600;
+}

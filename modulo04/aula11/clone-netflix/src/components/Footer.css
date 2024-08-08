@@ -1,0 +1,41 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.rodape {
+	background-color: #000000;
+	color: #ffffff;
+	height: 200px;
+
+	font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+		sans-serif;
+}
+
+.rodape ul {
+	list-style: none;
+}
+
+#contato {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.menuRodape {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+
+	padding-top: 40px;
+	font-size: 10px;
+}
+
+.menuRodape ul li a {
+	color: #ffffff;
+	text-decoration: underline;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+}

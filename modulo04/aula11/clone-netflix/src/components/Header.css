@@ -1,0 +1,13 @@
+.navbar {
+	display: flex;
+	justify-content: left;
+	align-items: start;
+
+	padding-top: 20px;
+	margin-left: 150px;
+}
+
+#logo {
+	width: 200px;
+	color: #e53322;
+}
