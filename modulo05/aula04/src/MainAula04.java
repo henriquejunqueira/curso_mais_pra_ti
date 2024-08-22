@@ -1,6 +1,6 @@
 import util.Utilitarios;
 
-public class Main {
+public class MainAula04 {
     public static void main(String[] args) {
         
         Geometria geo = new Geometria();

@@ -1,9 +1,6 @@
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
 import java.util.stream.IntStream;
 
-public class Main {
+public class MainAula03 {
     public static void main(String[] args) {
 
 //        int[] vetor = new int[5];

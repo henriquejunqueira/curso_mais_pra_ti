@@ -1,6 +1,6 @@
 import lists.CustomList;
 
-public class Main {
+public class MainAula05 {
     public static void main(String[] args) {
 
         CustomList customlist = new CustomList();
