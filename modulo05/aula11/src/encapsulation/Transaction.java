@@ -6,4 +6,12 @@ public interface Transaction {
 
     String getDetails();
 
+    default void testeMetodoDefault(){
+        System.out.println("Teste");
+    }
+
+    static void testeMetodoStatic(){
+
+    }
+
 }
