@@ -2,11 +2,11 @@ package lists;
 
 import java.util.Arrays;
 
-public class CustomList {
+public class CustomList01 {
     private int[] elements;
     private int size;
 
-    public CustomList(){
+    public CustomList01(){
         this.elements = new int[10];
         this.size = 0;
     }

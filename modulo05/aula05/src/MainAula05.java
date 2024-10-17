@@ -1,9 +1,9 @@
-import lists.CustomList;
+import lists.CustomList01;
 
 public class MainAula05 {
     public static void main(String[] args) {
 
-        CustomList customlist = new CustomList();
+        CustomList01 customlist = new CustomList01();
         customlist.add(1);
         customlist.add(2);
         customlist.add(3);

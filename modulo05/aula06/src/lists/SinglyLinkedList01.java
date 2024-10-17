@@ -1,6 +1,6 @@
 package lists;
 
-public class SinglyLinkedList {
+public class SinglyLinkedList01 {
 
     private Node head; // primeiro nó
 
@@ -15,7 +15,7 @@ public class SinglyLinkedList {
         }
     }
 
-    public SinglyLinkedList(){
+    public SinglyLinkedList01(){
         this.head = null;
     }
 

@@ -3,7 +3,7 @@ package lists;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Catalogo {
+public class Catalogo01 {
 
     ArrayList<String> listaProdutos = new ArrayList<>();
     Scanner entrada = new Scanner(System.in);
