@@ -1,0 +1,25 @@
+access-token:
+  private: ${ACCESS_TOKEN_PRIVATE_KEY_PATH}
+  public: ${ACCESS_TOKEN_PUBLIC_KEY_PATH}
+
+refresh-token:
+  private: ${REFRESH_TOKEN_PRIVATE_KEY_PATH}
+  public: ${REFRESH_TOKEN_PUBLIC_KEY_PATH}
+
+spring:
+  profiles:
+    active: dev
+  data:
+    mongodb:
+      uri: mongodb+srv://henriquejunqueira94:46RhhgI8GNOtG8fI@cluster0.1fqfk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: db1
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+ACCESS_TOKEN_PRIVATE_KEY_PATH: "access-refresh-token-keys/access-token-private.key"
+ACCESS_TOKEN_PUBLIC_KEY_PATH: "access-refresh-token-keys/access-token-public.key"
+REFRESH_TOKEN_PRIVATE_KEY_PATH: "access-refresh-token-keys/refresh-token-private.key"
+REFRESH_TOKEN_PUBLIC_KEY_PATH: "access-refresh-token-keys/refresh-token-public.key"
+
