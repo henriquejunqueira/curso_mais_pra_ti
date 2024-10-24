@@ -29,12 +29,13 @@ import com.example.JWT_OAuth2Demo.userModel.Token;
 public class AuthController {
     @Autowired
     UserDetailsManager userDetailsManager;
+
     @Autowired
-    @Lazy
     TokenGenerator tokenGenerator;
+
     @Autowired
-    @Lazy
     DaoAuthenticationProvider daoAuthenticationProvider;
+
     @Autowired
     @Qualifier("jwtRefreshTokenAuthProvider")
     JwtAuthenticationProvider refreshTokenAuthProvider;

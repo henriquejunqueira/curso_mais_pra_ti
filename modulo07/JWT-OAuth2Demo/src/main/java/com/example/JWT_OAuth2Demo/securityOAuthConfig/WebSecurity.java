@@ -43,21 +43,21 @@ public class WebSecurity {
     KeyUtils keyUtils;
 
     @Autowired
-    @Lazy
     PasswordEncoder passwordEncoder;
     
+    @Autowired
+    UserDetailsManager userDetailsManager;
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    @Autowired
-    UserDetailsManager userDetailsManager;
-
     @Bean
     public SecurityFilterChain securityFilterChain (HttpSecurity http) throws Exception {
         http
-                .authorizeHttpRequests((authorize) -> authorize.requestMatchers("/api/auth/*").permitAll().anyRequest().authenticated())
+                .authorizeHttpRequests((authorize) -> authorize.requestMatchers("/api/auth/*").permitAll()
+                        .anyRequest().authenticated())
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.disable())
                 .httpBasic(basic -> basic.disable())
